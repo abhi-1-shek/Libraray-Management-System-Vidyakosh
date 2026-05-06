@@ -6,13 +6,14 @@ We developed Vidyakosh, a modern React-based library management system. It featu
 
 🚀 Features
 
-     📖 Add, update, delete, and view books
+     *Dynamic CRUD Operations: Seamlessly create, read, update, and delete book records without page reloads.
+     
+     *Smart Search Engine: A real-time filter that indexes the collection by title, author, or ISBN as you type.
 
-     👤 User management (students/admins)
+     *State-Driven Persistence: Uses React hooks (useState, useMemo, useCallback) to manage the library state efficiently and prevent unnecessary re-renders.
 
-     📅 Track due dates and availability
-
-     🔍 Search and filter books
+     *Responsive Archive Grid: A flexible layout that adapts from a detailed table on desktops to organized cards on mobile devices.
+   
 
 🏗️ Tech Stack
 
