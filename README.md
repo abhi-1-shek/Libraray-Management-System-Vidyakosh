@@ -38,11 +38,11 @@ We developed Vidyakosh, a modern React-based library management system. It featu
 
            library-management-system/
            │
-           ├── frontend/              # React app
+           ├── lms frontend/              # React app
            │   ├── src/
            │   └── package.json
            │
-           ├── backend/              # Spring Boot app
+           ├── lms backend/              # Spring Boot app
            │   ├── src/main/java/
            │   ├── src/main/resources/
            │   └── pom.xml
