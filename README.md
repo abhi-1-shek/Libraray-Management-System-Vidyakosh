@@ -32,7 +32,7 @@ We developed Vidyakosh, a modern React-based library management system. It featu
 
 * Database
 
-      * MySQL / PostgreSQL (configurable)
+      * MySQL
 
 📂 Project Structure
 
