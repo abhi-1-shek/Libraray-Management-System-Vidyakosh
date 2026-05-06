@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Updated Background Palette */
+  --bg-deep: #0a0b10;
+  --glass-bg: rgba(20, 21, 33, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  
+  /* Kept original accent colors */
+  --accent-primary: #00d2ff;
+  --primary-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  --text-primary: #ffffff;
+  --text-secondary: #a0aec0;
+  --danger: #ff4b5c;
+  --safe: #00e676;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  min-height: 100vh;
+  padding: 40px 20px;
+  
+  /* NEW BACKGROUND: Mesh Gradient with subtle animated feel */
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(58, 123, 213, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(0, 210, 255, 0.1) 0px, transparent 50%),
+    radial-gradient(at 50% 100%, rgba(102, 51, 153, 0.1) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styling */
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 10px 0;
+}
+
+/* Form Section */
+.form-section {
+  background: var(--glass-bg);
+  backdrop-filter: blur(24px);
+  padding: 30px;
+  border-radius: 24px;
+  border: 1px solid var(--glass-border);
+  margin-bottom: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+input {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--glass-border);
+  color: white;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 0 4px rgba(0, 210, 255, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Search Bar */
+.search-container {
+  margin-bottom: 50px;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  opacity: 0.5;
+}
+
+.search-input {
+  width: 100%;
+  padding-left: 55px !important;
+  border-radius: 18px;
+  height: 60px;
+  font-size: 1.1rem;
+}
+
+/* --- GRID CARD LAYOUT --- */
+
+/* Hide Table Header */
+.book-table thead {
+  display: none !important;
+}
+
+.book-table {
+  width: 100%;
+  display: block;
+}
+
+.book-table tbody {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
+.book-table tr {
+  display: flex;
+  flex-direction: column;
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  padding: 30px;
+  border-radius: 28px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  min-height: 240px;
+}
+
+.book-table tr:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 25px 50px -12px rgba(0, 210, 255, 0.25);
+  background: rgba(30, 31, 45, 0.8);
+}
+
+.book-table td {
+  border: none;
+  padding: 0;
+  display: block;
+}
+
+/* Title Styling */
+.book-table td:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+  line-height: 1.2;
+  color: var(--text-primary);
+  padding-right: 60px;
+}
+
+/* Author Styling */
+.book-table td:nth-child(2) {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* ISBN Badge Styling */
+.book-table td:nth-child(3) {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  width: fit-content;
+  border: 1px solid rgba(0, 210, 255, 0.1);
+}
+
+/* Year Badge */
+.book-table td:nth-child(4) {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: var(--primary-gradient);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  box-shadow: 0 8px 15px rgba(0, 210, 255, 0.3);
+}
+
+/* Actions Row */
+.book-table td:nth-child(5) {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 25px;
+}
+
+/* Buttons */
+button {
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: var(--primary-gradient);
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 210, 255, 0.2);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(0, 210, 255, 0.4);
+}
+
+.btn-edit {
+  background: rgba(0, 230, 118, 0.08);
+  color: var(--safe);
+  border: 1px solid rgba(0, 230, 118, 0.15);
+  flex: 1;
+}
+
+.btn-delete {
+  background: rgba(255, 75, 92, 0.08);
+  color: var(--danger);
+  border: 1px solid rgba(255, 75, 92, 0.15);
+  flex: 1;
+}
+
+.btn-edit:hover {
+  background: var(--safe);
+  color: #000;
+}
+
+.btn-delete:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .book-table tbody {
+    grid-template-columns: 1fr;
+  }
+  
+  .book-table tr {
+    padding: 20px;
+  }
+}
