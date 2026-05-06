@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/books")
-@CrossOrigin(origins = "http://localhost:5173") // More secure than "*"
+@CrossOrigin(origins = "http://localhost:5173") 
 public class BookController {
 
     @Autowired
@@ -30,7 +30,7 @@ public class BookController {
         book.setTitle(details.getTitle());
         book.setAuthor(details.getAuthor());
         book.setIsbn(details.getIsbn());
-        book.setPublishYear(details.getPublishYear()); // Syncing the new field
+        book.setPublishYear(details.getPublishYear()); 
         
         return bookRepository.save(book);
     }
