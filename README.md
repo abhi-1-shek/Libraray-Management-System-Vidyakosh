@@ -1,4 +1,4 @@
-📚 Library Management System
+📚 Library Management System(Vidyakosh)
 
 
 We developed Vidyakosh, a modern React-based library management system. It features a high-performance Glassmorphism interface with a Grid Card layout for archive browsing. Key functionalities include real-time search, smooth state-driven record editing, and a robust CRUD architecture for managing volumes—all finalized with a professional rights-reserved footer.
