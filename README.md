@@ -96,8 +96,7 @@ Frontend will run at:
 | POST   | /api/books      | Add a new book |
 | PUT    | /api/books/{id} | Update book    |
 | DELETE | /api/books/{id} | Delete book    |
-| POST   | /api/issue      | Issue a book   |
-| POST   | /api/return     | Return a book  |
+
 
 
 🧪 Future Enhancements
